@@ -967,6 +967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SKYPRO
       objectReference: {fileID: 0}
+    - target: {fileID: 5025247905619325933, guid: 96466f45bdc6afe44ac7bc0e9b1f3f49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6267958089400533668, guid: 96466f45bdc6afe44ac7bc0e9b1f3f49,
         type: 3}
       propertyPath: m_Enabled
@@ -2174,17 +2179,17 @@ PrefabInstance:
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed,
         type: 3}
@@ -2541,13 +2546,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27118134, y: -0, z: -0, w: 0.9625283}
-  m_LocalPosition: {x: -1.3, y: 9.06, z: -3.35}
+  m_LocalRotation: {x: 0.41494197, y: 0.43037653, z: -0.23280905, w: 0.7670718}
+  m_LocalPosition: {x: -11.74, y: 21.45, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 31.469, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 56.822, y: 58.59, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,7 +2610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carTransform: {fileID: 917248074}
-  followSpeed: 7.49
+  followSpeed: 5.55
   lookSpeed: 5
 --- !u!1 &353616136 stripped
 GameObject:
@@ -2745,7 +2750,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 12357
+  m_ColorTemperature: 7700
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -4452,6 +4457,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9090255582582561980, guid: d70b3c09b476f50468983461701c3b4e,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090255582582561980, guid: d70b3c09b476f50468983461701c3b4e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090255582582561980, guid: d70b3c09b476f50468983461701c3b4e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090255582582561980, guid: d70b3c09b476f50468983461701c3b4e,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -61.9
       objectReference: {fileID: 0}
@@ -4499,6 +4519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090255582582561980, guid: d70b3c09b476f50468983461701c3b4e,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
