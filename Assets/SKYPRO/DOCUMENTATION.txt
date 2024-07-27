@@ -1,0 +1,16 @@
+All:
+Delete all directional lights from your scene and add the "SKYPRO" prefab to your scene.
+
+Sky:
+To use the sky shader, open the lighting panel and assign either the premade material "SKYPRO_Sky" 
+in Sky/Materials or a custom material using the same shader to the skybox material slot.
+
+Fog:
+To use the fog is requires some more setup than the sky. To use it, select your
+URP Forward Renderer asset, enable Opaque Texture and Depth Texture and set the
+opaque downsizing to none. Next, open your forward renderer and select add
+renderer feature. Select "SKYPRO_Renderer". Open the settings and assign the premade 
+fog material in SKYPRO/Materials or create your own using the "Shadergraphs/Fog" shader.
+
+Clouds:
+Setup is the same as the fog except use the clouds material instead of the fog.
