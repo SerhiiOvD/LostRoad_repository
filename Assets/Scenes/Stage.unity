@@ -8784,6 +8784,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4577343839057492393, guid: d70b3c09b476f50468983461701c3b4e, type: 3}
     - {fileID: 2830099337332256273, guid: d70b3c09b476f50468983461701c3b4e, type: 3}
+    - {fileID: 5324138891502421168, guid: d70b3c09b476f50468983461701c3b4e, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9090255582582561980, guid: d70b3c09b476f50468983461701c3b4e,
         type: 3}
@@ -11042,10 +11043,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1259500365}
-    - targetCorrespondingSourceObject: {fileID: 5324138891502421168, guid: d70b3c09b476f50468983461701c3b4e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2086844663}
     - targetCorrespondingSourceObject: {fileID: 4881022923571208182, guid: d70b3c09b476f50468983461701c3b4e,
         type: 3}
       insertIndex: -1
@@ -29003,34 +29000,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.8234506, y: 1.1531502, z: 1.4126666}
   m_Center: {x: -0.24046057, y: 0.5027968, z: -0.034448653}
---- !u!1 &2086844659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5324138891502421168, guid: d70b3c09b476f50468983461701c3b4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 576325820}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &2086844663
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086844659}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a4051385261ccbb45a4060203fd8d66e, type: 3}
 --- !u!1 &2087480659 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 89091966019808257, guid: d70b3c09b476f50468983461701c3b4e,
