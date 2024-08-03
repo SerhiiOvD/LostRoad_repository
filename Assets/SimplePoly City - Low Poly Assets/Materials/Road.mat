@@ -81,9 +81,9 @@ Material:
     - _UseAoMap: 0
     - _UseColorMap: 1
     - _UseEmissiveMap: 0
-    - _UseMetallicMap: 1
+    - _UseMetallicMap: 0
     - _UseNormalMap: 0
-    - _UseRoughnessMap: 0
+    - _UseRoughnessMap: 1
     m_Colors:
     - _Color: {r: 0.122641504, g: 0.11269134, b: 0.11269134, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
