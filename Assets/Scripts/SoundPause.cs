@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class SoundPause : MonoBehaviour
 {
-    private AudioSource audio;
+    private AudioSource audioS;
 
     void Start(){
-        audio = GetComponent<AudioSource>();
+        audioS = GetComponent<AudioSource>();
     }
     void Update(){ 
         if (PauseUI.isPaused == true)//IF game is paused 
         {
-            audio.mute = true;//Audio Sorce is muted
+            audioS.mute = true;//Audio Sorce is muted
         }
         else if (PauseUI.isPaused == false)
         {
-            audio.mute = false;
+            audioS.mute = false;
         }
     }
 }

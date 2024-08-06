@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fuel : MonoBehaviour
 {
     public float points = 10;//+ points
-    public FuelPoints fuelPoints;//Reference for script
+    public Player fuelPoints;//Reference for script
     public GameObject fuelPointUI;
     // Update is called once per frame
     void Update()
