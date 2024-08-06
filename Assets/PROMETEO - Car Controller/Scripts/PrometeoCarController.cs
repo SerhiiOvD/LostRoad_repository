@@ -29,7 +29,7 @@ public class PrometeoCarController : MonoBehaviour
       [Range(10, 120)]
       public int maxReverseSpeed = 45; //The maximum speed that the car can reach while going on reverse in km/h.
       [Range(1, 10)]
-      public int accelerationMultiplier = 2; // How fast the car can accelerate. 1 is a slow acceleration and 10 is the fastest.
+      public int accelerationMultiplier = 5; // How fast the car can accelerate. 1 is a slow acceleration and 10 is the fastest.
       [Space(10)]
       [Range(10, 45)]
       public int maxSteeringAngle = 27; // The maximum angle that the tires can reach while rotating the steering wheel.
@@ -267,7 +267,9 @@ public class PrometeoCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      if (Nitro.OnNitro > 0){
+        StartCoroutine("NitroCoroutine");
+      }
       //CAR DATA
 
       // We determine the speed of the car.
@@ -771,6 +773,21 @@ public class PrometeoCarController : MonoBehaviour
 
         driftingAxis = 0f;
       }
+    }
+
+    IEnumerator NitroCoroutine()//Nitro Mode Coroutine
+    {
+       // if (Nitro.OnNitro > 0)//Check if Nitro is taken ;
+       // {
+        carRigidbody.AddForce(transform.forward * Nitro.forceNitroAmount ,ForceMode.Impulse);//Accelerating the car
+
+        yield return new WaitForSeconds(5);//Duration of nitro mode
+          
+        if (Nitro.OnNitro > 0){
+         Nitro.OnNitro --;
+        }
+       
+        
     }
 
 }

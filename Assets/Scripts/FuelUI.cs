@@ -7,7 +7,7 @@ public class FuelUI : MonoBehaviour
 {
     public Slider slider;
     public Image fillBar;
-    public FuelPoints fuelPoints;
+    public Player fuelPoints;
 
     // Start is called before the first frame update
     void Start()

@@ -3,39 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FuelPoints : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
-    public float maxFuel = 100f;
+    public float maxFuel = 100f;//Max count what fuel can store
     [HideInInspector]
     public float currentlyFuel;
     private Rigidbody rd;
-    public float decreasingSpeed = 50;
-    public GameObject gameOver;
-    public GameObject mobileButtons;
+    public float decreasingSpeed = 50;//Speed decreasing of fuel
+    public GameObject gameOver;//Game Over GUI
+    public GameObject mobileButtons;//Mobile buttons for UI
 
     // Start is called before the first frame update
     void Start()
     {
         currentlyFuel = maxFuel;// Perform maxFuel to currentlyFuel
         rd = GetComponent<Rigidbody>();// Get RigidBody component
-        InvokeRepeating("FuelDecrease",0.2f,0.2f);// Invoke every 0.5 second void FuelDecreace
     }
 
-    void FuelDecrease()
+    
+    void Update()
     {
-        currentlyFuel -= decreasingSpeed * Time.deltaTime * 2;//Decrease "currentlyFuel" by "decreasing"
+        currentlyFuel -= decreasingSpeed * Time.deltaTime ;//Decrease "currentlyFuel" by "decreasing"
         if (currentlyFuel <= 0){//Check if fuel is <= 0;
-            Die();//Invoke void Die
+            Die();//Call Die function
         }
     }
 
     void Die()
     {
         rd.isKinematic = true;//Is kinematic mark
-        CancelInvoke("FuelDecrease");//Cancelling InvokeReapiting method
+        
         gameOver.SetActive(true);
         mobileButtons.SetActive(false);
-        Debug.Log("Fuel is out");
+        //Debug.Log("Fuel is out");
     }
 }
