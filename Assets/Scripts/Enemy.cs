@@ -8,8 +8,6 @@ public class Enemy : MonoBehaviour
 
     private NavMeshAgent agent; // NavMeshAgent for navigation
     private bool isDie = false; // Flag to check if the zombie is dead
-    private CharacterController characterController; // CharacterController for the zombie
-    private float gravitySpeed = -9.81f; // Gravity speed
 
     private Collider coll; // Collider for the zombie
     private Animator animator; // Animator for the zombie
@@ -17,14 +15,20 @@ public class Enemy : MonoBehaviour
 
     public GameObject ScorePointUI;
 
-    void Start() 
-    { 
+
+    void Awake(){
         agent = GetComponent<NavMeshAgent>(); // Get the NavMeshAgent component
-        characterController = GetComponent<CharacterController>(); // Get the CharacterController component
+        
         animator = GetComponent<Animator>(); // Get the Animator component
         coll = GetComponent<Collider>(); // Get the Collider component
+        
 
-        MoveToRandomPoint(); // Move to a random point
+    }
+    void Start() 
+    { 
+        
+
+        MoveToRandomPoint(); // Move a to random point
     }
 
     void Update() 
@@ -38,26 +42,9 @@ public class Enemy : MonoBehaviour
             } 
         } 
 
-        if (characterController != null)
-        { 
-            ApplyGravity(); // Apply gravity to the zombie
-        } 
+        
     }
 
-    void ApplyGravity()
-    { 
-        if(characterController.isGrounded)
-        { 
-            verticalVelocity = -1f; // Set vertical velocity to -1 if grounded
-        } 
-        else
-        { 
-            verticalVelocity += gravitySpeed * Time.deltaTime; // Apply gravity if not grounded
-        } 
-        Vector3 gravityMove = new Vector3(0, verticalVelocity, 0); // Create a Vector3 for gravity movement
-
-        characterController.Move(gravityMove * Time.deltaTime); // Move the character controller with gravity
-    }
 
     void OnTriggerEnter(Collider col) 
     { 

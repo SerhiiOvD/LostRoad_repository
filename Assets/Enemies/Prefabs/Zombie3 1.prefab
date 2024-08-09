@@ -1172,8 +1172,7 @@ GameObject:
   - component: {fileID: 8394513340198535981}
   - component: {fileID: 7484669335461627933}
   - component: {fileID: 7451500624952782141}
-  - component: {fileID: 2431818631906941411}
-  - component: {fileID: 1552989844789769236}
+  - component: {fileID: 795586004878941910}
   m_Layer: 6
   m_Name: Zombie3 1
   m_TagString: Untagged
@@ -1231,11 +1230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ebafd108d51bd45b20f41caba0663b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   ScorePointUI: {fileID: 8328229616240698840, guid: ca32ecc60bcba5348a04f2e4ccaccf0c,
     type: 3}
 --- !u!195 &7451500624952782141
@@ -1248,7 +1242,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 0.5
+  m_Speed: 0
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1260,34 +1254,8 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!143 &2431818631906941411
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2826472612812377142}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2.57
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.23, z: 0}
---- !u!65 &1552989844789769236
-BoxCollider:
+--- !u!136 &795586004878941910
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1304,9 +1272,11 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5, y: 2, z: 1.5}
-  m_Center: {x: 0, y: 1.26, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.53847593
+  m_Height: 2.2481894
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0717913, z: 0}
 --- !u!1 &2852470903019498287
 GameObject:
   m_ObjectHideFlags: 0
