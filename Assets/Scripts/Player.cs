@@ -13,17 +13,26 @@ public class Player : MonoBehaviour
     public float decreasingSpeed = 50;//Speed decreasing of fuel
     public GameObject gameOver;//Game Over GUI
     public GameObject mobileButtons;//Mobile buttons for UI
+    [HideInInspector]
+    public AudioSource playerSource;
+    public AudioClip SFXCollision;
 
     // Start is called before the first frame update
     void Start()
     {
         currentlyFuel = maxFuel;// Perform maxFuel to currentlyFuel
-        rd = GetComponent<Rigidbody>();// Get RigidBody component
+        rd = GetComponent<Rigidbody>();
+        playerSource = GetComponent<AudioSource>();// Get RigidBody component
     }
 
     
     void Update()
     {
+        if (currentlyFuel > maxFuel){
+            currentlyFuel = maxFuel;
+        }
+
+
         currentlyFuel -= decreasingSpeed * Time.deltaTime ;//Decrease "currentlyFuel" by "decreasing"
         if (currentlyFuel <= 0){//Check if fuel is <= 0;
             Die();//Call Die function
@@ -37,5 +46,11 @@ public class Player : MonoBehaviour
         gameOver.SetActive(true);
         mobileButtons.SetActive(false);
         //Debug.Log("Fuel is out");
+    }
+
+    void OnCollisionEnter(Collision coll){
+        if (coll.gameObject.CompareTag("Building")){
+            playerSource.PlayOneShot(SFXCollision);
+        }
     }
 }

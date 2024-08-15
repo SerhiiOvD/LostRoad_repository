@@ -121,3 +121,5 @@ MonoBehaviour:
   nitroEffect: {fileID: 1781949194303238870, guid: 4e35892e4c5444340a0e2189311808e5,
     type: 3}
   spawnNitro: {fileID: 0}
+  playerScript: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 1c18f60c62abeb742b9046d8991a4113, type: 3}

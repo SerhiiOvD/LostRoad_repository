@@ -5,8 +5,11 @@ using UnityEngine;
 public class Fuel : MonoBehaviour
 {
     public float points = 10;//+ points
-    public Player fuelPoints;//Reference for script
+    public Player playerFuelPoints;//Reference for script
     public GameObject fuelPointUI;
+    public Player playerScript;
+    public AudioClip SoundClip;
+
     // Update is called once per frame
     void Update()
     {
@@ -19,11 +22,12 @@ public class Fuel : MonoBehaviour
             
             
             Destroy(gameObject);//Selfdestroy
-            fuelPoints.currentlyFuel += points; // Append fuel on certain points
+            playerFuelPoints.currentlyFuel += points; // Append fuel on certain points
             
             Vector3 instantiatePosition = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z); // Instantiate position for UI score
             Instantiate(fuelPointUI, instantiatePosition, transform.rotation); // Instantiate UI Canvas
 
+            playerScript.playerSource.PlayOneShot(SoundClip);//Play sound effect
         }
     }
 }
