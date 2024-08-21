@@ -4,12 +4,12 @@ namespace Assets.MobileOptimizedWater.Scripts
 
     public class AnimationStarter : MonoBehaviour
     {
-        [SerializeField] private Animator animators;
-        [SerializeField] private Motion animations;
+        [SerializeField] private Animator animator;
+        [SerializeField] private Motion animationM;
 
         public void Awake()
         {
-            animators.Play(animations.name);
+            animator.Play(animationM.name);
         }
     }
 }

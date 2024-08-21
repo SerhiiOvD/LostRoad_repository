@@ -550,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScorePointUI: {fileID: 8328229616240698840, guid: ca32ecc60bcba5348a04f2e4ccaccf0c,
     type: 3}
+  soundEffect: {fileID: 8300000, guid: d95e66099eb09144ba15e884d74834e2, type: 3}
 --- !u!195 &2678787325957126091
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -560,7 +561,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 0
+  m_Speed: 0.1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -647,8 +648,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d95e66099eb09144ba15e884d74834e2, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -693,7 +694,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0

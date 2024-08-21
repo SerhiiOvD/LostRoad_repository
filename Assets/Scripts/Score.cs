@@ -8,10 +8,10 @@ public class Score : MonoBehaviour
 
     public Text scoreText;
     public static float scoreCount; // Static field to hold the score
-    public Ease animEase;
     private RectTransform transf;
 
-    private float previousScoreCount; // To track the previous score
+    [HideInInspector]
+    public float previousScoreCount; // To track the previous score
 
     void Awake()
     {
@@ -28,8 +28,7 @@ public class Score : MonoBehaviour
     void AnimateScore()
     {
         // Animate the RectTransform's Y position
-        transf.DOMoveY(1060f, 0.1f)
-              .SetEase(animEase)
+        transf.DOScale(2.1f, 0.1f)
               .SetLoops(2, LoopType.Yoyo);
     }
 

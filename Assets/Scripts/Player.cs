@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         rd.isKinematic = true;//Is kinematic mark
         

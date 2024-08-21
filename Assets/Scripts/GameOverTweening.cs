@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
+using UnityEngine.UI;
+using TMPro;
 public class GameOverTweening : MonoBehaviour
 {
     private RectTransform go;
@@ -16,11 +17,6 @@ public class GameOverTweening : MonoBehaviour
     {
         go.DOMoveY(700f, 2f)
           .SetEase(typeAnimation);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
