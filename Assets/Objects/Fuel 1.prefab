@@ -134,6 +134,8 @@ MonoBehaviour:
   fuelPoints: {fileID: 0}
   fuelPointUI: {fileID: 1688812455814123006, guid: 901e6e3404bb5b44b9992a93aef57024,
     type: 3}
+  player: {fileID: 0}
+  SoundClip: {fileID: 0}
 --- !u!65 &5864721331526709674
 BoxCollider:
   m_ObjectHideFlags: 0

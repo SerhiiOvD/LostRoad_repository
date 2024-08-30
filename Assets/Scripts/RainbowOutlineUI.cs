@@ -2,27 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class RainbowOutlineUI : MonoBehaviour
 {
+    public float speedAnimation = 1f; // Duration of each color transition
+    private Outline line; // Variable to hold the Outline component
 
-    public Color startColor = Color.red;
-    public Color endColor = Color.blue;
-
-    public float speedAnimation = 1f;
-    private Outline line;//Component variable
-
+    void Awake()
+    {
+        // Get the Outline component attached to the GameObject
+        line = GetComponent<Outline>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        line = GetComponent<Outline>();// Get component "OutLine"
+        // Start the color animation
+        Animate();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Animate()
     {
-        float t = Mathf.PingPong(Time.time * speedAnimation, 1f);
-        line.effectColor = Color.Lerp(startColor, endColor, t);
+        // Animate the Outline color to a random color over the specified duration
+        line.DOColor(RandomColor(), speedAnimation)
+            .OnComplete(Animate); // Recursively call Animate after the current animation is complete
+    }
+
+    // Generate a random color with full opacity (alpha = 1)
+    Color RandomColor()
+    {
+        return new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f), 1f);
     }
 }
