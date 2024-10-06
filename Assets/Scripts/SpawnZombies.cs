@@ -12,11 +12,7 @@ public class SpawnZombies : MonoBehaviour
         InvokeRepeating("InstantZombies",3f,3f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     void InstantZombies()
     {

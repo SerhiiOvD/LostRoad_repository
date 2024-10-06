@@ -4144,6 +4144,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2847525949359012301, guid: 79d0ca8b77e301442afdb49f102e8aed,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847525949359012301, guid: 79d0ca8b77e301442afdb49f102e8aed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d997c6d92b71154e8dee74617594aea, type: 2}
+    - target: {fileID: 2847525949359012301, guid: 79d0ca8b77e301442afdb49f102e8aed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 975b4d94cd15da34d833f64957a8479a, type: 2}
+    - target: {fileID: 2847525949359012301, guid: 79d0ca8b77e301442afdb49f102e8aed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f83c9f8edb2fbf418cbc41b24b128ca, type: 2}
     - target: {fileID: 4575599446629713621, guid: 79d0ca8b77e301442afdb49f102e8aed,
         type: 3}
       propertyPath: m_Material
@@ -7569,6 +7589,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 795692734566100662, guid: d70b3c09b476f50468983461701c3b4e,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 795692734566100662, guid: d70b3c09b476f50468983461701c3b4e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f83c9f8edb2fbf418cbc41b24b128ca, type: 2}
     - target: {fileID: 862691674266158859, guid: d70b3c09b476f50468983461701c3b4e,
         type: 3}
       propertyPath: m_IsActive
